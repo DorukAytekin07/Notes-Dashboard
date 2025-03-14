@@ -14,7 +14,7 @@ body {
   background-color: #333;
   display: grid;
   grid-template-rows: 7fr 3fr;
-  grid-template-columns: 2fr 5.2fr 2.8fr;
+  grid-template-columns: 1.5fr 5fr 2fr;
   grid-template-areas:
     'navbar main email'
     'navbar list email';
