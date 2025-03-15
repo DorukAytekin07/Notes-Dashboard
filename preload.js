@@ -1,4 +1,6 @@
 const { contextBridge } = require("electron/renderer");
-contextBridge.exposeInMainWorld("test", {
-	test: () => "Doruk",
+const fs = require("fs")
+const os = require("os")
+contextBridge.exposeInMainWorld("fs", {
+	readFiles: () => fs.readdirSync(`${os.homedir()}/xournall`),
 });
