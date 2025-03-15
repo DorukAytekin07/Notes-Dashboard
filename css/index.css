@@ -25,10 +25,12 @@ body {
   background-color: #fefbd8;
   grid-area: navbar;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
-
+#courses{
+  background-color: #eee;
+}
 .main {
   background-color: #80ced6;
   grid-area: main;
