@@ -7,49 +7,56 @@ body {
 * {
   box-sizing: border-box;
 }
-body{
+
+body {
   height: 100vh;
   width: 100vw;
   background-color: #333;
-  display:grid;
+  display: grid;
   grid-template-rows: 7fr 3fr;
-  grid-template-columns:2fr 5.2fr 2.8fr;
+  grid-template-columns: 1.5fr 5fr 2fr;
   grid-template-areas:
     'navbar main email'
     'navbar list email';
-  text-align:center;
+  text-align: center;
 }
-.navbar{
-    background-color: #fefbd8;
-    grid-area: navbar;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.main{
-  background-color: #80ced6;
-  grid-area:main;
 
-display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.list{
-  background-color: #49f3b4;
-  grid-area:list;
+.navbar {
+  background-color: #fefbd8;
+  grid-area: navbar;
   display: flex;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+#courses{
+  background-color: #eee;
+}
+.main {
+  background-color: #80ced6;
+  grid-area: main;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
-.email{
-  
+
+.list {
+  background-color: #49f3b4;
+  grid-area: list;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.email {
+
   background-color: #d5f4e6;
-  grid-area:email;
-  
-display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-area: email;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
