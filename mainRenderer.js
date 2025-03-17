@@ -20,12 +20,22 @@ for (let i = 0; i < files.length; i++) {
 		const file_name = capitalize(file);
 
 		var div = document.createElement("div");
+		var button = document.createElement("button");
 		var p = document.createElement("p");
 
 		div.style.backgroundColor = "#eee";
+		button.addEventListener(`click`, () => {
+			window.fs.changePage(file);
+      //save data to json file
+			window.fs.loadNote(file)
+		});
 		p.innerText = `${file_name}`;
+		button.id = `${file}`;
 
-		div.appendChild(p);
+		button.appendChild(p);
+		div.appendChild(button);
 		navbar.appendChild(div);
 	}
 }
+
+

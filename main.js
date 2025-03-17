@@ -1,11 +1,9 @@
-// look at the readDir and glob for the search in the directory
-// and also open all the notes in the xournal++ because
-// it is easy to find and open
-// also learn how to add code to html file via javascript
-// probably it has a way but now I don't know
-
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("node:path");
+
+ipcMain.on("change-page:changePage", (event, page) => {
+	BrowserWindow.getAllWindows()[0].loadFile(`./src/notes.html`);
+});
 
 const createWindow = () => {
 	const win = new BrowserWindow({

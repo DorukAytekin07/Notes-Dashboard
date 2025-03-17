@@ -6,33 +6,28 @@
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
   <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="../css/index.css">
   <title>Dashboard Home Page</title>
 </head>
 
-<body>
+<body id="notes">
   <nav class="navbar" id="navbar">
     <div id="courses">
-      <p>Home</p>
     </div>
     <div id="courses">
-      <p>E-mail</p>
     </div>
     <div id="courses">
-      <p>Settings</p>
     </div>
   </nav>
-  <section class="main">
-    Main Section
+  <section class="main" id="main">
   </section>
   <section class="list">
-    Last Opened Notes
   </section>
   <aside class="email">
-    Email Section
   </aside>
 
-  <script src="./mainRenderer.js"></script>
+  <script src="../mainRenderer.js"></script>
+  <script src="../notesRenderer.js"></script>
 
 </body>
 
