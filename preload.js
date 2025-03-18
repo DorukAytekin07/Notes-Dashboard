@@ -18,5 +18,5 @@ contextBridge.exposeInMainWorld("fs", {
 	importNote: () => {
 		return datas["currentFile"];
 	},
-	// write a function that get the json data of current note and returns it
 });
+

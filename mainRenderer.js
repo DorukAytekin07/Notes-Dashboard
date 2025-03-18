@@ -1,6 +1,7 @@
 const files = window.fs.readFiles();
 navbar = document.getElementById("navbar");
 
+
 function capitalize(string) {
 	words = string.split("-");
 	newWord = "";
@@ -26,7 +27,6 @@ for (let i = 0; i < files.length; i++) {
 		div.style.backgroundColor = "#eee";
 		button.addEventListener(`click`, () => {
 			window.fs.changePage(file);
-      //save data to json file
 			window.fs.loadNote(file)
 		});
 		p.innerText = `${file_name}`;

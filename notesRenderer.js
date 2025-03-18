@@ -1,6 +1,3 @@
-//implement the code of calling a function
-//from preload js loadNote probably 
-//and assing it value current note
 const currentNote = window.fs.importNote()
 console.log(currentNote);
 if (currentNote != "index") {
