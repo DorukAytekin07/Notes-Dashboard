@@ -1,6 +1,7 @@
 const files = window.fs.readFiles();
 navbar = document.getElementById("navbar");
 
+
 function capitalize(string) {
 	words = string.split("-");
 	newWord = "";
