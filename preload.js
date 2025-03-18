@@ -19,3 +19,4 @@ contextBridge.exposeInMainWorld("fs", {
 		return datas["currentFile"];
 	},
 });
+
