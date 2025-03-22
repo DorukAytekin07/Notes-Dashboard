@@ -5,7 +5,7 @@ const datas = require("./module.json");
 const jsonfile = require("jsonfile");
 
 contextBridge.exposeInMainWorld("fs", {
-	readFiles: () => fs.readdirSync(`${os.homedir()}/xournall`),
+  readFiles: (directory) => fs.readdirSync(`${os.homedir()}/${directory}`),
 	changePage: (page) => ipcRenderer.send("change-page:changePage", page),
 	loadNote: (page) =>
 		jsonfile.writeFile(
