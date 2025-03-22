@@ -1,0 +1,43 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	background-color: #333;
+	display: grid;
+	grid-template-rows: 7fr 3fr;
+	grid-template-columns: 1.5fr 5fr 2fr;
+	grid-template-areas:
+		"navbar main main"
+		"navbar main main";
+	text-align: center;
+}
+
+.navbar {
+	background-color: #fefbd8;
+	grid-area: navbar;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+#courses {
+	background-color: #eee;
+}
+
+.main {
+	background-color: #80ced6;
+	grid-area: main;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
