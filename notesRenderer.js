@@ -13,6 +13,9 @@ for (let i = 0; i < noteFiles.length; i++) {
     var button = document.createElement("button");
     button.innerText = noteFiles[i];
     notes.appendChild(button);
+    button.addEventListener('click', () => {
+      window.fs.openNote(currentNote+"/"+noteFiles[i]) 
+    })
   }
 }
 main.appendChild(notes);
