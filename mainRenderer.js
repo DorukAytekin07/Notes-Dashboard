@@ -1,4 +1,4 @@
-const files = window.fs.readFiles("/xournall");
+const files = window.fs.readFiles("");
 const navbar = document.getElementById("navbar");
 const homePage = document.getElementById("home-page");
 const settingPage = document.getElementById("settings-page");

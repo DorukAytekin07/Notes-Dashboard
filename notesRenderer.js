@@ -7,7 +7,7 @@ function checkValidFiles(file) {
 const main = document.getElementById("main");
 const currentNote = window.fs.importNote();
 const notes = document.createElement("div");
-const noteFiles = window.fs.readFiles(`xournall/${currentNote}`);
+const noteFiles = window.fs.readFiles(`/${currentNote}`);
 for (let i = 0; i < noteFiles.length; i++) {
   if (checkValidFiles(noteFiles[i])) {
     var button = document.createElement("button");
