@@ -2,7 +2,6 @@ const files = window.fs.readFiles("");
 const navbar = document.getElementById("navbar");
 const homePage = document.getElementById("home-page");
 const settingPage = document.getElementById("settings-page");
-const emailPage = document.getElementById("email-page");
 
 function capitalize(string) {
   words = string.split("-");
@@ -27,17 +26,11 @@ settingPage.addEventListener("click", () => {
   window.fs.loadNote("setting");
 });
 
-emailPage.addEventListener("click", () => {
-  window.fs.changePage("email");
-  window.fs.loadNote("email");
-});
-
 for (let i = 0; i < files.length; i++) {
   const file = files[i];
   if (file != "current-course") {
     const file_name = capitalize(file);
 
-    var div = document.createElement("div");
     var button = document.createElement("button");
     var p = document.createElement("p");
 
@@ -47,9 +40,8 @@ for (let i = 0; i < files.length; i++) {
     });
     p.innerText = `${file_name}`;
     button.id = `${file}`;
-
+    button.className = "navbar-buttons"
     button.appendChild(p);
-    div.appendChild(button);
-    navbar.appendChild(div);
+    navbar.appendChild(button);
   }
 }
