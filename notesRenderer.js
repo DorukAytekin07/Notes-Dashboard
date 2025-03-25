@@ -4,18 +4,27 @@ function checkValidFiles(file) {
     return true;
   }
 }
+function removeExtension(file) {
+  return (extension = file.split(".")[0]);
+}
 const main = document.getElementById("main");
 const currentNote = window.fs.importNote();
-const notes = document.createElement("div");
 const noteFiles = window.fs.readFiles(`/${currentNote}`);
 for (let i = 0; i < noteFiles.length; i++) {
   if (checkValidFiles(noteFiles[i])) {
     var button = document.createElement("button");
-    button.innerText = noteFiles[i];
-    notes.appendChild(button);
-    button.addEventListener('click', () => {
-      window.fs.openNote(currentNote+"/"+noteFiles[i]) 
-    })
+    var details = document.createElement("div");
+    var noteName = document.createElement("p");
+    noteName.innerText = capitalize(removeExtension(noteFiles[i]))
+    details.className = "details";
+
+    details.appendChild(noteName);
+    button.appendChild(details);
+
+    button.className = "note";
+    button.addEventListener("click", () => {
+      window.fs.openNote(currentNote + "/" + noteFiles[i]);
+    });
+    main.appendChild(button);
   }
 }
-main.appendChild(notes);
