@@ -1,58 +1,69 @@
+@import url("./colors.css");
+
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div {
+  height: fit-content;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  height: min-content;
+  color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: larger;
+  font-weight: 700;
 }
 
 body {
-	height: 100vh;
-	width: 100vw;
-	background-color: #333;
-	display: grid;
-	grid-template-rows: 7fr 3fr;
-	grid-template-columns: 1.5fr 5fr 2fr;
-	grid-template-areas:
-		"navbar main email"
-		"navbar list email";
-	text-align: center;
+  background-color: var(--background);
+  color: var(--text);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 7fr 3fr;
+  grid-template-columns: 1.5fr 5fr 2fr;
+  grid-template-areas:
+    "navbar main main"
+    "navbar main main";
+  text-align: center;
 }
 
 .navbar {
-	background-color: #fefbd8;
-	grid-area: navbar;
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
+  grid-area: navbar;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-#courses {
-	background-color: #eee;
+.navbar-buttons {
+  margin-top: 20px;
+  background-color: var(--secondary);
+  height: 5%;
+  width: 90%;
+  border-radius: 100px;
+  transition: 0.5s ease-in;
 }
 
-.main {
-	background-color: #80ced6;
-	grid-area: main;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.list {
-	background-color: #49f3b4;
-	grid-area: list;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.email {
-	background-color: #d5f4e6;
-	grid-area: email;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.navbar-buttons:hover {
+  background-color: var(--accent);
+  color: white;
 }
